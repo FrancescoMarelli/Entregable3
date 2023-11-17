@@ -1,0 +1,67 @@
+@startuml
+class Main {
++ {static} void main(String[])
+}
+abstract class nvccCompilador {
+}
+class nvvmTesla {
+}
+class nvprofTesla {
+}
+abstract class nvvmMonTool {
+}
+abstract class nvprofProfiler {
+}
+class TeslaFactory {
++ void print()
++ nvccCompilador createCompilador()
++ nvprofProfiler createProfiler()
++ nvvmMonTool createMonTool()
+}
+class nvccFermi {
+}
+class nvccTesla {
+}
+class nvvmPascal {
+}
+class nvprofPascal {
+}
+class FermiFactory {
++ void print()
++ nvccCompilador createCompilador()
++ nvprofProfiler createProfiler()
++ nvvmMonTool createMonTool()
+}
+interface AbstractFactory {
++ void print()
++ nvccCompilador createCompilador()
++ nvprofProfiler createProfiler()
++ nvvmMonTool createMonTool()
+}
+class nvccPascal {
+}
+class PascalFactory {
++ void print()
++ nvccCompilador createCompilador()
++ nvprofProfiler createProfiler()
++ nvvmMonTool createMonTool()
+}
+class nvprofFermi {
+}
+class nvvmFermi {
+}
+
+
+nvvmMonTool <|-- nvvmTesla
+nvprofProfiler <|-- nvprofTesla
+AbstractFactory <|.. TeslaFactory
+nvccCompilador <|-- nvccFermi
+nvccCompilador <|-- nvccTesla
+nvvmMonTool <|-- nvvmPascal
+nvprofProfiler <|-- nvprofPascal
+AbstractFactory <|.. FermiFactory
+nvccCompilador <|-- nvccPascal
+AbstractFactory <|.. PascalFactory
+nvprofProfiler <|-- nvprofFermi
+nvvmMonTool <|-- nvvmFermi
+@enduml

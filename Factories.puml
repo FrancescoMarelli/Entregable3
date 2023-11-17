@@ -1,0 +1,31 @@
+@startuml
+interface AbstractFactory {
++ void print()
++ nvccCompilador createCompilador()
++ nvprofProfiler createProfiler()
++ nvvmMonTool createMonTool()
+}
+class FermiFactory {
++ void print()
++ nvccCompilador createCompilador()
++ nvprofProfiler createProfiler()
++ nvvmMonTool createMonTool()
+}
+class PascalFactory {
++ void print()
++ nvccCompilador createCompilador()
++ nvprofProfiler createProfiler()
++ nvvmMonTool createMonTool()
+}
+class TeslaFactory {
++ void print()
++ nvccCompilador createCompilador()
++ nvprofProfiler createProfiler()
++ nvvmMonTool createMonTool()
+}
+
+
+AbstractFactory <|.. FermiFactory
+AbstractFactory <|.. PascalFactory
+AbstractFactory <|.. TeslaFactory
+@enduml

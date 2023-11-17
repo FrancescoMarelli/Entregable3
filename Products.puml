@@ -1,0 +1,37 @@
+@startuml
+abstract class nvccCompilador {
+}
+class nvvmTesla {
+}
+class nvprofTesla {
+}
+abstract class nvvmMonTool {
+}
+abstract class nvprofProfiler {
+}
+class nvccFermi {
+}
+class nvccTesla {
+}
+class nvvmPascal {
+}
+class nvprofPascal {
+}
+class nvccPascal {
+}
+class nvprofFermi {
+}
+class nvvmFermi {
+}
+
+
+nvvmMonTool <|-- nvvmTesla
+nvprofProfiler <|-- nvprofTesla
+nvccCompilador <|-- nvccFermi
+nvccCompilador <|-- nvccTesla
+nvvmMonTool <|-- nvvmPascal
+nvprofProfiler <|-- nvprofPascal
+nvccCompilador <|-- nvccPascal
+nvprofProfiler <|-- nvprofFermi
+nvvmMonTool <|-- nvvmFermi
+@enduml
